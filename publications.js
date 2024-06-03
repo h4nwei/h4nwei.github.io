@@ -102,7 +102,7 @@ var data = {
             "img": "images/deepwsd.jpg",
             "title": "DeepWSD: Projecting Degradations in Perceptual Space to Wasserstein Distance in Deep Feature Space",
             "authors": "Xingran Liao, Baoliang Chen, Hanwei Zhu, Shiqi Wang, Mingliang Zhou, Sam Kwong",
-            "conference": "Computer Vision and Pattern Recognition (<b>CVPR</b>)",
+            "conference": "ACM International Conference on Multimedia (<b>MM</b>)",
             "year": 2022,
             "arxiv": "https://arxiv.org/pdf/2208.03323",
             "github": "https://github.com/Buka-Xing/DeepWSD",
