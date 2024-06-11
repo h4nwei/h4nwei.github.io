@@ -17,7 +17,7 @@ var data = {
             "highlight": true,
             "img": "images/compare2score.png",
             "title": "Adaptive Image Quality Assessment via Teaching Large Multimodal Model to Compare",
-            "authors": "Hanwei Zhu*, Haoning Wu*, Yixuan Li, Weixia Zhang, Zicheng Zhang, Baoliang Chen, Lingyu Zhu, Yuming Fang, Guangtao Zhai, Weisi Lin, Shiqi Wang",
+            "authors": "Hanwei Zhu*, Haoning Wu*, Yixuan Li, Zicheng Zhang, Baoliang Chen, Lingyu Zhu, Yuming Fang, Guangtao Zhai, Weisi Lin, Shiqi Wang",
             "preprint": "ArXiv preprint",
             "year": 2024,
             "project": "https://compare2score.github.io/",
