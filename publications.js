@@ -26,17 +26,6 @@ var data = {
         },
         {
             "highlight": true,
-            "img": "images/co-instruct.png",
-            "title": "Towards Open-ended Visual Quality Comparison",
-            "authors": "Haoning Wu*, Hanwei Zhu*, Zicheng Zhang*, Erli Zhang, Chaofeng Chen, Liang Liao, Chunyi Li, Annan Wang, Wenxiu Sun, Qiong Yan, Xiaohong Liu, Guangtao Zhai, Shiqi Wang, Weisi Lin",
-            "preprint": "ArXiv preprint",
-            "year": 2024,
-            "project": "https://co-instruct.github.io/",
-            "arxiv": "https://arxiv.org/abs/2402.16641",
-            "github": "https://github.com/Q-Future/Co-Instruct",
-        },
-        {
-            "highlight": true,
             "img": "images/2afc-lmm.jpg",
             "title": "2AFC Prompting of Large Multimodal Models for Image Quality Assessment",
             "authors": "Hanwei Zhu*, Xiangjie Sui*, Baoliang Chen, Xulin Liu, Peilin Chen, Yuming Fang, Shiqi Wang",
@@ -90,6 +79,27 @@ var data = {
         // ========================================
         {
             "highlight": true,
+            "img": "images/co-instruct.png",
+            "title": "Towards Open-ended Visual Quality Comparison",
+            "authors": "Haoning Wu*, Hanwei Zhu*, Zicheng Zhang*, Erli Zhang, Chaofeng Chen, Liang Liao, Chunyi Li, Annan Wang, Wenxiu Sun, Qiong Yan, Xiaohong Liu, Guangtao Zhai, Shiqi Wang, Weisi Lin",
+            "conference": "European Conference on Computer Vision",
+            "year": 2024,
+            "project": "https://co-instruct.github.io/",
+            "arxiv": "https://arxiv.org/abs/2402.16641",
+            "github": "https://github.com/Q-Future/Co-Instruct",
+        },
+        {
+            "highlight": true,
+            "img": "images/udu-net.png",
+            "title": "Unrolled Decomposed Unpaired Learning for Controllable Low-Light Video Enhancement",
+            "authors": "Lingyu Zhu, Wenhan Yang, Baoliang Chen, Hanwei Zhu, Zhangkai Ni, Qi Mao, Shiqi Wang",
+            "conference": "European Conference on Computer Vision",
+            "year": 2024,
+            "arxiv": "https://arxiv.org/abs/tbd",
+            "github": "https://github.com/tbd",
+        },
+        {
+            "highlight": true,
             "img": "images/scandmm.jpg",
             "title": "ScanDMM: A Deep Markov Model of Scanpath Prediction for VR Images",
             "authors": "Xiangjie Sui, Yuming Fang, Hanwei Zhu, Shiqi Wang, Zhou Wang",
@@ -99,6 +109,7 @@ var data = {
             "github": "https://github.com/xiangjieSui/ScanDMM",
         },
         {
+            "highlight": true,
             "img": "images/deepwsd.jpg",
             "title": "DeepWSD: Projecting Degradations in Perceptual Space to Wasserstein Distance in Deep Feature Space",
             "authors": "Xingran Liao, Baoliang Chen, Hanwei Zhu, Shiqi Wang, Mingliang Zhou, Sam Kwong",
