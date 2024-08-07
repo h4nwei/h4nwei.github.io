@@ -25,16 +25,6 @@ var data = {
             "github": "https://github.com/h4nwei/Compare2Score",
         },
         {
-            "highlight": true,
-            "img": "images/2afc-lmm.jpg",
-            "title": "2AFC Prompting of Large Multimodal Models for Image Quality Assessment",
-            "authors": "Hanwei Zhu*, Xiangjie Sui*, Baoliang Chen, Xulin Liu, Peilin Chen, Yuming Fang, Shiqi Wang",
-            "preprint": "ArXiv preprint",
-            "year": 2024,
-            "arxiv": "https://arxiv.org/abs/2402.01162",
-            "github": "https://github.com/h4nwei/2AFC-LMMs",
-        },
-        {
             // "highlight": true,
             // "img": "images/gsr.jpg",
             "title": "Deep Shape-Texture Statistics for Completely Blind Image Quality Evaluation",
@@ -89,7 +79,7 @@ var data = {
             "github": "https://github.com/Q-Future/Co-Instruct",
         },
         {
-            "highlight": true,
+            "highlight": false,
             "img": "images/udu-net.png",
             "title": "Unrolled Decomposed Unpaired Learning for Controllable Low-Light Video Enhancement",
             "authors": "Lingyu Zhu, Wenhan Yang, Baoliang Chen, Hanwei Zhu, Zhangkai Ni, Qi Mao, Shiqi Wang",
@@ -151,6 +141,16 @@ var data = {
         // Journal papers
         // ========================================
         {
+            "highlight": true,
+            "img": "images/2afc-lmm.jpg",
+            "title": "2AFC Prompting of Large Multimodal Models for Image Quality Assessment",
+            "authors": "Hanwei Zhu*, Xiangjie Sui*, Baoliang Chen, Xulin Liu, Peilin Chen, Yuming Fang, Shiqi Wang",
+            "journal": "IEEE Transactions on Circuits and Systems for Video Technology (<b>TCSVT</b>)",
+            "year": 2024,
+            "arxiv": "https://arxiv.org/abs/2402.01162",
+            "github": "https://github.com/h4nwei/2AFC-LMMs",
+        },
+        {
             // "highlight": true,
             // "img": "images/stra-vqa.png",
             "title": "Temporally Consistent Enhancement of Low-Light Videos via Spatial-Temporal Compatible Learning",
@@ -161,8 +161,8 @@ var data = {
             "github": "https://github.com/lingyzhu0101/low-light-video-enhancement",
         },
         {
-            // "highlight": true,
-            // "img": "images/stra-vqa.png",
+            "highlight": true,
+            "img": "images/dfss-iqa",
             "title": "Deep Feature Statistics Mapping for Generalized Screen Content Image Quality Assessment",
             "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang, Sam Kwong",
             "journal": "IEEE Transactions on Image Processing (<b>TIP</b>)",
@@ -221,7 +221,7 @@ var data = {
             // "github": "https://github.com/h4nwei/STI-VQA",
         },
         {
-            "highlight": true,
+            "highlight": false,
             "img": "images/mefnet.png",
             "title": "Deep Guided Learning for Fast Multi-exposure Image Fusion",
             "authors": "Kede Ma, Zhengfang Duanmu, Hanwei Zhu, Yuming Fang, Zhou Wang",
