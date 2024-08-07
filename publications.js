@@ -46,16 +46,6 @@ var data = {
         },
         {
             "highlight": true,
-            "img": "images/debiased.png",
-            "title": "Debiased Mapping for Full-Reference Image Quality Assessment",
-            "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang",
-            "preprint": "ArXiv preprint",
-            "year": 2023,
-            "arxiv": "https://arxiv.org/pdf/2302.11464",
-            // "github": "https://github.com/xiangjieSui/GSR",
-        },
-        {
-            "highlight": true,
             "img": "images/deepdc.png",
             "title": "DeepDC: Deep Distance Correlation as a Perceptual Image Quality Evaluator",
             "authors": "Hanwei Zhu, Baoliang Chen, Lingyu Zhu, Shiqi Wang, Weisi Lin",
@@ -63,6 +53,16 @@ var data = {
             "year": 2023,
             "arxiv": "https://arxiv.org/abs/2211.04927",
             "github": "https://github.com/h4nwei/DeepDC",
+        },
+        {
+            "highlight": true,
+            "img": "images/debiased.png",
+            "title": "Debiased Mapping for Full-Reference Image Quality Assessment",
+            "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang",
+            "preprint": "ArXiv preprint",
+            "year": 2023,
+            "arxiv": "https://arxiv.org/pdf/2302.11464",
+            // "github": "https://github.com/xiangjieSui/GSR",
         },
         // ========================================
         // Conference papers
@@ -162,7 +162,7 @@ var data = {
         },
         {
             "highlight": true,
-            "img": "images/dfss-iqa",
+            "img": "images/dfss-iqa.png",
             "title": "Deep Feature Statistics Mapping for Generalized Screen Content Image Quality Assessment",
             "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang, Sam Kwong",
             "journal": "IEEE Transactions on Image Processing (<b>TIP</b>)",
