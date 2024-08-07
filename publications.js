@@ -45,8 +45,8 @@ var data = {
             "github": "https://github.com/xiangjieSui/GSR",
         },
         {
-            // "highlight": true,
-            // "img": "images/gsr.jpg",
+            "highlight": true,
+            "img": "images/debiased.png",
             "title": "Debiased Mapping for Full-Reference Image Quality Assessment",
             "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang",
             "preprint": "ArXiv preprint",
