@@ -12,18 +12,6 @@ var data = {
         //     "github": "",
         // },
         // Preprints
-        
-        {
-            "highlight": true,
-            "img": "images/compare2score.png",
-            "title": "Adaptive Image Quality Assessment via Teaching Large Multimodal Model to Compare",
-            "authors": "Hanwei Zhu*, Haoning Wu*, Yixuan Li, Zicheng Zhang, Baoliang Chen, Lingyu Zhu, Yuming Fang, Guangtao Zhai, Weisi Lin, Shiqi Wang",
-            "preprint": "ArXiv preprint",
-            "year": 2024,
-            "project": "https://compare2score.github.io/",
-            "arxiv": "https://arxiv.org/abs/2405.19298",
-            "github": "https://github.com/h4nwei/Compare2Score",
-        },
 
         {
             "highlight": true,
@@ -45,19 +33,21 @@ var data = {
             "arxiv": "https://arxiv.org/abs/2211.04927",
             "github": "https://github.com/h4nwei/DeepDC",
         },
-        {
-            "highlight": true,
-            "img": "images/debiased.png",
-            "title": "Debiased Mapping for Full-Reference Image Quality Assessment",
-            "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang",
-            "preprint": "ArXiv preprint",
-            "year": 2023,
-            "arxiv": "https://arxiv.org/pdf/2302.11464",
-            // "github": "https://github.com/xiangjieSui/GSR",
-        },
         // ========================================
         // Conference papers
         // ========================================
+        {
+            "highlight": true,
+            "img": "images/compare2score.png",
+            "title": "Adaptive Image Quality Assessment via Teaching Large Multimodal Model to Compare",
+            "authors": "Hanwei Zhu*, Haoning Wu*, Yixuan Li, Zicheng Zhang, Baoliang Chen, Lingyu Zhu, Yuming Fang, Guangtao Zhai, Weisi Lin, Shiqi Wang",
+            "preprint": "Conference on Neural Information Processing Systems (<b>ECCV</b>)",
+            "oral": "Spotlight",
+            "year": 2024,
+            "project": "https://compare2score.github.io/",
+            "arxiv": "https://arxiv.org/abs/2405.19298",
+            "github": "https://github.com/h4nwei/Compare2Score",
+        },
         {
             "highlight": true,
             "img": "images/co-instruct.png",
@@ -133,11 +123,20 @@ var data = {
         // Journal papers
         // ========================================
         {
+            "highlight": true,
+            "img": "images/debiased.png",
+            "title": "Debiased Mapping for Full-Reference Image Quality Assessment",
+            "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang",
+            "journal": "IEEE Transactions on Multimedia (<b>TMM</b>)",
+            "year": 2024,
+            "arxiv": "https://arxiv.org/pdf/2302.11464v1",
+            "github": "https://github.com/Baoliang93/DMM",
+        },
+        {
             // "highlight": true,
             // "img": "images/gsr.jpg",
             "title": "Deep Shape-Texture Statistics for Completely Blind Image Quality Evaluation",
             "authors": "Yixuan Li, Peilin Chen, Hanwei Zhu, Keyan Ding, Leida Li, Shiqi Wang",
-            "preprint": "ArXiv preprint",
             "year": 2024,
             "journal": "ACM Transactions on Multimedia Computing, Communications, and Applications (<b>ToMM</b>)",
             "arxiv": "https://arxiv.org/pdf/2401.08107",
@@ -181,7 +180,7 @@ var data = {
             "journal": "IEEE Transactions on Multimedia (<b>TMM</b>)",
             "year": 2024,
             "arxiv": "https://arxiv.org/pdf/2302.11464",
-            // "github": "https://github.com/Baoliang93/DFSS-IQA",
+            "github": "https://github.com/Baoliang93/IACA_For_Lowlight_IQA",
         },
         {
             "highlight": true,
