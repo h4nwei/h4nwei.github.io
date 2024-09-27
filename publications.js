@@ -40,8 +40,8 @@ var data = {
             "highlight": true,
             "img": "images/compare2score.png",
             "title": "Adaptive Image Quality Assessment via Teaching Large Multimodal Model to Compare",
-            "authors": "Hanwei Zhu*, Haoning Wu*, Yixuan Li, Zicheng Zhang, Baoliang Chen, Lingyu Zhu, Yuming Fang, Guangtao Zhai, Weisi Lin, Shiqi Wang",
-            "preprint": "Conference on Neural Information Processing Systems (<b>ECCV</b>)",
+            "authors": "Hanwei Zhu, Haoning Wu, Yixuan Li, Zicheng Zhang, Baoliang Chen, Lingyu Zhu, Yuming Fang, Guangtao Zhai, Weisi Lin, Shiqi Wang",
+            "conference": "Conference on Neural Information Processing Systems (<b>NeurIPs</b>)",
             "oral": "Spotlight",
             "year": 2024,
             "project": "https://compare2score.github.io/",
@@ -123,7 +123,7 @@ var data = {
         // Journal papers
         // ========================================
         {
-            "highlight": true,
+            "highlight": false,
             "img": "images/debiased.png",
             "title": "Debiased Mapping for Full-Reference Image Quality Assessment",
             "authors": "Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang",
