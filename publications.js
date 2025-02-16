@@ -56,7 +56,7 @@ var data = {
             "year": 2024,
             "project": "https://compare2score.github.io/",
             "arxiv": "https://arxiv.org/abs/2405.19298",
-            "github": "https://github.com/h4nwei/Compare2Score",
+            "github": "https://github.com/Q-Future/Compare2Score",
         },
         {
             "highlight": true,
