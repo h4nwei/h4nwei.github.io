@@ -37,11 +37,21 @@ var data = {
         // Conference papers
         // ========================================
         {
+            "highlight": false,
+            // "img": "images/compare2score.png",
+            "title": "AI-generated Image Quality Assessment in Visual Communication",
+            "authors": "Yu Tian, Yixuan Li, Baoliang Chen, Hanwei Zhu, Shiqi Wang, Sam Kwong",
+            "conference": "Annual AAAI Conference on Artificial Intelligence (<b>AAAI</b>)",
+            "year": 2025,
+            "arxiv": "https://arxiv.org/abs/2412.15677",
+            "github": "https://github.com/ytian73/AIGI-VC",
+        },
+        {
             "highlight": true,
             "img": "images/compare2score.png",
             "title": "Adaptive Image Quality Assessment via Teaching Large Multimodal Model to Compare",
             "authors": "Hanwei Zhu, Haoning Wu, Yixuan Li, Zicheng Zhang, Baoliang Chen, Lingyu Zhu, Yuming Fang, Guangtao Zhai, Weisi Lin, Shiqi Wang",
-            "conference": "Conference on Neural Information Processing Systems (<b>NeurIPs</b>)",
+            "conference": "Conference on Neural Information Processing Systems (<b>NeurIPS</b>)",
             "oral": "Spotlight",
             "year": 2024,
             "project": "https://compare2score.github.io/",
