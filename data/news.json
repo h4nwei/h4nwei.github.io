@@ -1,0 +1,17 @@
+{
+  "news": [
+    { "date": "Dec 2024", "content": "A paper on AIGC evaluation was accepted by AAAI." },
+    { "date": "Dec 2024", "content": "I passed my Ph.D. thesis defense! Cheers." },
+    { "date": "Sept 2024", "content_html": "<a href=\"https://arxiv.org/pdf/2405.19298\" target=\"_blank\">Compare2Score</a> was accepted by NeurIPS'24 as a <span style=\"color:red;\">Spotlight</span>." },
+    { "date": "Sept 2024", "content_html": "A paper on full-reference image quality assessment (<a href=\"https://arxiv.org/pdf/2302.11464v1\" target=\"_blank\">DMM</a>) was accepted by TMM." },
+    { "date": "Aug 2024", "content_html": "A paper on deep shape-texture statistics for opinion-unaware BIQA (<a href=\"https://arxiv.org/pdf/2401.08107\" target=\"_blank\">DSTS</a>) was accepted by TOMM." },
+    { "date": "Aug 2024", "content_html": "<a href=\"https://co-instruct.github.io\" target=\"_blank\">Co-Instruct</a> was selected for an <span style=\"color:red;\">Oral</span> presentation." },
+    { "date": "Jul 2024", "content_html": "Our paper on 2AFC prompting of LMMs for IQA (<a href=\"https://arxiv.org/pdf/2405.19298\" target=\"_blank\">2AFC-LMM</a>) was accepted by TCSVT." },
+    { "date": "Jul 2024", "content_html": "Two papers (<a href=\"https://arxiv.org/abs/2402.16641\" target=\"_blank\">Co-Instruct</a> and UDU-Net) were accepted by ECCV." },
+    { "date": "Jun 2024", "content": "Built this homepage." },
+    { "date": "May 2024", "content_html": "<a href=\"https://arxiv.org/pdf/2405.19298\" target=\"_blank\">Compare2Score</a> is now available on arXiv." },
+    { "date": "May 2024", "content": "A paper on low-light video enhancement was accepted by IJCV." },
+    { "date": "Apr 2024", "content": "A paper on image quality assessment was accepted by TIP." },
+    { "date": "Feb 2024", "content": "A paper on video quality assessment was accepted by TCSVT." }
+  ]
+}

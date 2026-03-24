@@ -2,7 +2,46 @@ body {
      margin:         auto;
      background-color: #eee;
      font-size:      12pt;
-	   padding-left:   5pt;
+     padding-left:   5pt;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e7e7e7;
+  backdrop-filter: blur(4px);
+}
+
+.site-header-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 16pt;
+  font-weight: bold;
+  color: #111;
+}
+
+.site-nav a {
+  margin-left: 14px;
+  color: #333;
+}
+
+.site-nav a.active {
+  font-weight: bold;
+}
+
+.disabled-link {
+  color: #666;
+  cursor: default;
+  margin-left: 2px;
 }
 
 h1   {
@@ -86,9 +125,9 @@ hr {
 }
 
 #profile img{
-    width: 155;
+    width: 155px;
     max-height: 300px;
-    margin: 8 20 20 20;
+    margin: 8px 20px 20px 20px;
     object-fit: contain;
 }
 
@@ -198,7 +237,7 @@ div.news:hover::-webkit-scrollbar-track {
   display: inline-block;
 }
 
-.experience table, td {
+.experience table, .experience td {
   vertical-align: top;
   padding: 3px 5px 3px 5px;
 }
@@ -206,7 +245,8 @@ div.news:hover::-webkit-scrollbar-track {
 /*  Paper styles
     FontAwesome reference: http://astronautweb.co/snippet/font-awesome/
 --------------------------------------*/
-#highlight-publication ul {
+#highlight-publication ul,
+#selected-publication ul {
 	padding: 0;
 	list-style: none;
 }
@@ -222,7 +262,7 @@ div.news:hover::-webkit-scrollbar-track {
     margin-bottom: 10px;
     margin-top: 10px;
     /* max-height: 150px; */
-    max-width: 900;
+    max-width: 900px;
     min-height: 100px;
     align-items: center;
 }
@@ -274,7 +314,7 @@ div.news:hover::-webkit-scrollbar-track {
 #paper .authors {
     padding: 1px;
     margin: 1px;
-    font-size: 10pt
+    font-size: 10pt;
     /* color: #1F618D; */
     /* font-style: italic; */
 }
@@ -298,34 +338,136 @@ div.news:hover::-webkit-scrollbar-track {
 #paper .pdflink::before{
   font-family: FontAwesome;
   color: black;
-  margin: 5 5 5 2;
+  margin: 5px 5px 5px 2px;
   content: "\f1c1";
 }
 
 #paper .codelink::before{
   font-family: FontAwesome;
   color: black;
-  margin: 5 5 5 5;
+  margin: 5px;
   content: "\f09b";
 }
 
 #paper .pptlink::before{
   font-family: FontAwesome;
   color: black;
-  margin: 5 5 5 5;
-  content: "\f1c4"
+  margin: 5px;
+  content: "\f1c4";
 }
 
 #paper .prjlink::before{
   font-family: FontAwesome;
   color: black;
-  margin: 5 5 5 5;
-  content: "\f085"
+  margin: 5px;
+  content: "\f085";
 }
 
 #paper .coming{
   font-family: FontAwesome;
   font-style: italic;
   color: gray;
-  margin: 5 5 5 5;
+  margin: 5px;
+}
+
+.pub-filter-group {
+  margin-bottom: 15px;
+}
+
+.pub-filter-btn {
+  border: 1px solid #d7d7d7;
+  background: #fafafa;
+  padding: 6px 10px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pub-filter-btn.active {
+  background: #1f6feb;
+  color: #fff;
+  border-color: #1f6feb;
+}
+
+.lab-tagline {
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.lab-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.openings-contact-box {
+  margin-top: 12px;
+  background: #f7f9fc;
+  border: 1px solid #e5eaf2;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.member-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+}
+
+.member-name {
+  margin: 0 0 6px 0;
+}
+
+.member-title {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.member-bio {
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.member-link {
+  font-size: 10pt;
+}
+
+.empty-text {
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .site-nav a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  #profile {
+    flex-direction: column;
+  }
+
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
 }
