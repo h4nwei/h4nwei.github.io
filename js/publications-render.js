@@ -23,79 +23,82 @@
     return links;
   }
 
-  function renderSelected(publications, fields, authorLinks, fullName) {
-    ["preprint", "conference", "journal"].forEach(function (kind) {
-      var list = document.querySelector("#selected-publication ul." + kind);
-      if (list) list.innerHTML = "";
-    });
+  function buildFullItem(paper, fields, authorLinks, fullName) {
+    var dest = getDestination(paper);
+    var itemClass = paper.highlight ? "full-list-itemhl" : "full-list-item";
+    return (
+      '<li class="' +
+      itemClass +
+      '">"' +
+      paper.title +
+      '." <em>' +
+      authorHtml(paper.authors, authorLinks, fullName) +
+      ".</em> " +
+      paper[dest] +
+      ", " +
+      paper.year +
+      ". " +
+      (paper.impact_factor ? "(IF = " + paper.impact_factor + ")" : "") +
+      " " +
+      (paper.note || "") +
+      ' <ul class="full-list">' +
+      buildExtraLinks(paper, fields) +
+      "</ul></li>"
+    );
+  }
 
-    publications.forEach(function (paper) {
-      if (!paper.highlight) return;
-      var dest = getDestination(paper);
-      var target = document.querySelector("#selected-publication ul." + dest);
-      if (!target) return;
-
-      var yearText = paper.oral ? paper.year + " (<b style='color:red;'>" + paper.oral + "</b>)" : String(paper.year);
-
-      var row =
-        "<li>" +
-        '  <div class="hflex-container" id="paper">' +
-        "    <table>" +
-        "      <tr>" +
-        '        <td rowspan="4" class="imgtd"><img src="' + (paper.img || "") + '"></td>' +
-        '        <td><p class="title">' + paper.title + "</p></td>" +
-        "      </tr>" +
-        "      <tr><td>" + authorHtml(paper.authors, authorLinks, fullName) + "</td></tr>" +
-        "      <tr><td><p class=\"venue\">" + paper[dest] + ", " + yearText + "</p></td></tr>" +
-        "      <tr><td>" +
-        (paper.pdf ? '<a href="' + paper.pdf + '" target="_blank">[PDF]</a>' : "") +
-        (paper.arxiv ? '<a href="' + paper.arxiv + '" target="_blank"><img class="imgbadge arxivbadge"></a>' : "") +
-        (paper.github ? '<a href="' + paper.github + '" target="_blank"><img class="imgbadge" src="https://img.shields.io/github/stars/' + paper.github.split("/").slice(-2).join("/") + '?style=social"></a>' : "") +
-        (paper.project ? '<a href="' + paper.project + '" target="_blank"><img class="prjbadge" src="https://img.shields.io/badge/Project-' + paper.project.split("/").slice(-2).join("") + '-e9f1f6?style=flat-square"></a>' : "") +
-        "      </td></tr>" +
-        "    </table>" +
-        "  </div>" +
-        "</li>";
-      target.insertAdjacentHTML("beforeend", row);
+  function sortByYearDescending(papers) {
+    return papers.slice().sort(function (a, b) {
+      return Number(b.year || 0) - Number(a.year || 0);
     });
   }
 
-  function renderFull(publications, fields, authorLinks, fullName) {
-    ["preprint", "conference", "journal"].forEach(function (kind) {
-      var list = document.querySelector("#full-publication ol." + kind);
-      if (list) list.innerHTML = "";
+  function groupByYear(papers) {
+    var grouped = {};
+    papers.forEach(function (paper) {
+      var year = String(paper.year || "Unknown");
+      if (!grouped[year]) grouped[year] = [];
+      grouped[year].push(paper);
     });
-
-    publications.forEach(function (paper) {
-      var dest = getDestination(paper);
-      var target = document.querySelector("#full-publication ol." + dest);
-      if (!target) return;
-
-      var itemClass = paper.highlight ? "full-list-itemhl" : "full-list-item";
-      var row =
-        '<li class="' +
-        itemClass +
-        '">"' +
-        paper.title +
-        '." <em>' +
-        authorHtml(paper.authors, authorLinks, fullName) +
-        ".</em> " +
-        paper[dest] +
-        ", " +
-        paper.year +
-        ". " +
-        (paper.impact_factor ? "(IF = " + paper.impact_factor + ")" : "") +
-        " " +
-        (paper.note || "") +
-        ' <ul class="full-list">' +
-        buildExtraLinks(paper, fields) +
-        "</ul></li>";
-
-      target.insertAdjacentHTML("beforeend", row);
-    });
+    return grouped;
   }
 
-  function setupFullPageFilter() {
+  function renderFull(publications, fields, authorLinks, fullName, filter) {
+    var container = document.getElementById("publications-container");
+    if (!container) return;
+
+    var filtered = sortByYearDescending(publications).filter(function (paper) {
+      return filter === "all" ? true : getDestination(paper) === filter;
+    });
+
+    if (!filtered.length) {
+      container.innerHTML = '<p class="empty-text">No publications found for this filter.</p>';
+      return;
+    }
+
+    var grouped = groupByYear(filtered);
+    var years = Object.keys(grouped).sort(function (a, b) {
+      return Number(b) - Number(a);
+    });
+
+    container.innerHTML = years
+      .map(function (year) {
+        var items = grouped[year]
+          .map(function (paper) {
+            return buildFullItem(paper, fields, authorLinks, fullName);
+          })
+          .join("");
+        return (
+          '<section class="pub-year-group">' +
+          '  <h3 class="pub-year-title">' + year + "</h3>" +
+          '  <ol class="pub-year-list">' + items + "</ol>" +
+          "</section>"
+        );
+      })
+      .join("");
+  }
+
+  function setupFullPageFilter(publications, fields, authorLinks, fullName) {
     var buttons = document.querySelectorAll(".pub-filter-btn");
     if (!buttons.length) return;
 
@@ -106,12 +109,7 @@
           b.classList.remove("active");
         });
         button.classList.add("active");
-
-        ["preprint", "conference", "journal"].forEach(function (kind) {
-          var section = document.getElementById("section-" + kind);
-          if (!section) return;
-          section.style.display = filter === "all" || filter === kind ? "block" : "none";
-        });
+        renderFull(publications, fields, authorLinks, fullName, filter);
       });
     });
   }
@@ -121,13 +119,9 @@
     var fullName = "Hanwei Zhu";
     var page = document.body.getAttribute("data-page");
 
-    if (page === "home") {
-      renderSelected(data.publications, data.fields, data.author_links, fullName);
-    }
-
     if (page === "publications") {
-      renderFull(data.publications, data.fields, data.author_links, fullName);
-      setupFullPageFilter();
+      renderFull(data.publications, data.fields, data.author_links, fullName, "all");
+      setupFullPageFilter(data.publications, data.fields, data.author_links, fullName);
     }
   }
 

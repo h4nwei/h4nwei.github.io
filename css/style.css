@@ -389,6 +389,24 @@ div.news:hover::-webkit-scrollbar-track {
   border-color: #1f6feb;
 }
 
+#publications-container {
+  margin-top: 10px;
+}
+
+.pub-year-group {
+  margin-bottom: 20px;
+}
+
+.pub-year-title {
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ececec;
+}
+
+.pub-year-list {
+  margin-top: 0;
+}
+
 .lab-tagline {
   color: #333;
   margin-bottom: 18px;
