@@ -1,8 +1,7 @@
 (function () {
   var items = [
     { id: "home", href: "index.html", label: "About" },
-    { id: "publications", href: "publications.html", label: "Publications" },
-    { id: "lab", href: "lab.html", label: "Lab" }
+    { id: "publications", href: "publications.html", label: "Publications" }
   ];
 
   function createNav(pageId) {

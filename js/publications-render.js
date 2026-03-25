@@ -17,33 +17,30 @@
     var links = "";
     Object.keys(fields || {}).forEach(function (field) {
       if (paper[field]) {
-        links += '<li class="list-inline-item"><a href="' + paper[field] + '" target="_blank">[' + fields[field] + "]</a></li>";
+        links += '<a class="publication-link" href="' + paper[field] + '" target="_blank">[' + fields[field] + "]</a> ";
       }
     });
-    return links;
+    return links.trim();
   }
 
   function buildFullItem(paper, fields, authorLinks, fullName) {
     var dest = getDestination(paper);
-    var itemClass = paper.highlight ? "full-list-itemhl" : "full-list-item";
+    var links = buildExtraLinks(paper, fields);
+    var note = [];
+    if (paper.impact_factor) {
+      note.push("IF = " + paper.impact_factor);
+    }
+    if (paper.note) {
+      note.push(paper.note);
+    }
+
     return (
-      '<li class="' +
-      itemClass +
-      '">"' +
-      paper.title +
-      '." <em>' +
-      authorHtml(paper.authors, authorLinks, fullName) +
-      ".</em> " +
-      paper[dest] +
-      ", " +
-      paper.year +
-      ". " +
-      (paper.impact_factor ? "(IF = " + paper.impact_factor + ")" : "") +
-      " " +
-      (paper.note || "") +
-      ' <ul class="full-list">' +
-      buildExtraLinks(paper, fields) +
-      "</ul></li>"
+      '<li class="publication-item">' +
+      '  <div class="publication-title-line"><strong>' + paper.title + "</strong></div>" +
+      '  <div class="publication-authors-line">' + authorHtml(paper.authors, authorLinks, fullName) + "</div>" +
+      '  <div class="publication-venue-line"><em>' + paper[dest] + "</em>, " + paper.year + (note.length ? ". " + note.join(". ") : ".") + "</div>" +
+      (links ? '  <div class="publication-links-line">' + links + "</div>" : "") +
+      "</li>"
     );
   }
 
@@ -90,7 +87,7 @@
           .join("");
         return (
           '<section class="pub-year-group">' +
-          '  <h3 class="pub-year-title">' + year + "</h3>" +
+          '  <h3 class="pub-year-title">&#9679; ' + year + "</h3>" +
           '  <ol class="pub-year-list">' + items + "</ol>" +
           "</section>"
         );
