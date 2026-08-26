@@ -14,14 +14,6 @@ var data = {
         // Preprints
         {
             "highlight": false,
-            "title": "From Global to Granular: Revealing IQA Model Performance via Correlation Surface",
-            "authors": "Baoliang Chen, Danni Huang, Hanwei Zhu, Lingyu Zhu, Wei Zhou, Shiqi Wang, Yuming Fang, Weisi Lin",
-            "preprint": "ArXiv preprint",
-            "year": 2026,
-            "arxiv": "https://arxiv.org/abs/2601.21738",
-        },
-        {
-            "highlight": false,
             "title": "Plug In, Grade Right: Psychology-Inspired AGIQA",
             "authors": "Zhicheng Liao, Baoliang Chen, Hanwei Zhu, Lingyu Zhu, Shiqi Wang, Weisi Lin",
             "preprint": "ArXiv preprint",
@@ -58,9 +50,34 @@ var data = {
         // ========================================
         {
             "highlight": false,
+            "title": "LongVQUBench: Benchmarking Long-Term Video Quality Understanding of Vision-Language Models",
+            "authors": "Arpita Nema, Hanwei Zhu, Xi Zhang, Weisi Lin",
+            "conference": "European Conference on Computer Vision (<b>ECCV</b>)",
+            "year": 2026,
+            "arxiv": "https://arxiv.org/pdf/2607.01086",
+            "github": "https://longvqubench.github.io/",
+        },
+        {
+            "highlight": false,
+            "title": "Temporal Quality Aggregation for VQA: Benchmark and Psychology-Inspired Model",
+            "authors": "Baoliang Chen, Changsheng Gao, Lingyu Zhu, Liang Xie, Hanwei Zhu, Zhijian Hao",
+            "conference": "International Conference on Quality of Multimedia Experience (<b>QoMEX</b>)",
+            "year": 2026,
+            "arxiv": "https://ieeexplore.ieee.org/abstract/document/11618368"
+        },
+        {
+            "highlight": false,
+            "title": "Benchmarking Emotional Accuracy and Identity Consistency in Facial Image-to-Video Generation",
+            "authors": "Songchao Tan, Ruiqi Li, Hanwei Zhu, Shiqi Wang, Huimin Ma, Siwei Ma",
+            "conference": "IEEE International Conference on Acoustics, Speech and Signal Processing (<b>ICASSP</b>)",
+            "year": 2026,
+            "arxiv": "https://ieeexplore.ieee.org/abstract/document/11464835/"
+        },
+        {
+            "highlight": false,
             "title": "Modality-Aware Bit Allocation for Mixed-Precision Quantization of Vision-Language Models",
             "authors": "Xi Zhang, Hanwei Zhu, Jiamang Wang, Xiaolin Wu, Weisi Lin",
-            "conference": "IEEE Computer Vision and Pattern Recognition Conference Findings (<b>CVPR</b>)",
+            "conference": "IEEE Computer Vision and Pattern Recognition Conference Findings (<b>CVPR Findings</b>)",
             "year": 2026,
             "arxiv": "https://arxiv.org/pdf/2511.****",
         },
@@ -104,7 +121,7 @@ var data = {
             "highlight": false,
             "title": "VQualA 2025 Challenge on Visual Quality Comparison for Large Multimodal Models: Methods and Results",
             "authors": "Hanwei Zhu, Haoning Wu, Zicheng Zhang, Lingyu Zhu, Yixuan Li, Peilin Chen, Shiqi Wang, Chris Wei Zhou, et al.",
-            "conference": "IEEE/CVF International Conference on Computer Vision Workshop (<b>ICCV</b>)",
+            "conference": "IEEE/CVF International Conference on Computer Vision Workshops (<b>ICCV Workshops</b>)",
             "year": 2025,
             "pdf": "https://openaccess.thecvf.com/content/ICCV2025W/VQualA/papers/Zhu_VQualA_2025_Challenge_on_Visual_Quality_Comparison_for_Large_Multimodal_ICCVW_2025_paper.pdf",
             "project": "https://codalab.lisn.upsaclay.fr/competitions/23016",
@@ -228,6 +245,15 @@ var data = {
         // ========================================
         // Journal papers
         // ========================================
+        {
+            "highlight": false,
+            "title": "From Global to Granular: Revealing IQA Model Performance via Correlation Surface",
+            "authors": "Baoliang Chen, Danni Huang, Hanwei Zhu, Lingyu Zhu, Wei Zhou, Shiqi Wang, Yuming Fang, Weisi Lin",
+            "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence (<b>TPAMI</b>)",
+            "year": 2026,
+            "arxiv": "https://arxiv.org/abs/2601.21738",
+            "github": "https://github.com/Dniaaa/GMC",
+        },
         {
             "highlight": false,
             "img": "images/deepdc.png",
